@@ -11,7 +11,18 @@
 <body>
 <div class="wrapper">
     <h1><a href="{% url 'posts:list' %}">Post</a></h1>
+    <nav>
+        <ul>
+            <li>
+                <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                    {%csrf_token%}
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
     {%block content%}
+    
     {%endblock%}
 </div>
 </body>
