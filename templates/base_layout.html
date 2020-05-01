@@ -5,22 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles.css' %}"
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
     <title>Document</title>
 </head>
 <body>
-<div class="wrapper">
-    <h1><a href="{% url 'posts:list' %}">Post</a></h1>
+<header class="wrapper">
+    <h1><a href="{% url 'home' %}">Post</a></h1>
     <nav>
         <ul>
+            {% if user.is_authenticated %}
             <li>
                 <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
                     {%csrf_token%}
                     <button type="submit">Logout</button>
                 </form>
             </li>
+            <li><a href=" {% url 'posts:create' %}" class="highlight">New post</a></li>
+            {% else %}
+               <li><a href="{% url 'accounts:login' %}"> Login</a></li> 
+               <li><a href="{% url 'accounts:signup' %}"> Signup</a></li> 
+            {% endif %}
         </ul>
     </nav>
+</header>
+<div class="wrapper">
     {%block content%}
     
     {%endblock%}
