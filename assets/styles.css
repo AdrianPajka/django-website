@@ -1,9 +1,8 @@
 body{
-    /* background-color: rgb(26, 46, 46); */
-    background-color: rgb(225, 1, 255);
+    background-color: rgb(26, 46, 46);
     color: #fff
 };
-/* body *{
+body *{
     font-family: Ubuntu;
 }
 
@@ -18,7 +17,6 @@ a, a:hover, a:visited{
 }
 
 .wrapper{
-    border: 2px solid green;
     max-width: 960px;
     margin: 0 auto;
 }
@@ -53,7 +51,7 @@ nav button{
     font-size: 16px;
 }
 
-.post{
+.posts{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
@@ -61,7 +59,7 @@ nav button{
 
 .post{
     padding: 10px;
-    border: 1px solid #00dba0;
+    border: 1px solid #c7bf50;
     position: relative;
     padding-bottom: 40px;
 }
@@ -72,7 +70,7 @@ nav button{
 
 .post .author{
     padding: 10px;
-    background: #00dba0;
+    background: #c7bf50;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -104,7 +102,7 @@ nav button{
 
 .site-form {
     margin-top: 60px;
-    border: 1px solid #00dba0;
+    border: 1px solid #c7bf50;
     padding: 20px;
 }
 
@@ -115,10 +113,10 @@ nav button{
 }
 
 a.highlight{
-    border: 1px solid #00dba0;
+    border: 1px solid #c7bf50;
     padding: 10px;
     border-radius: 4px;
-    color: #00dba0;
+    color: #c7bf50;
 }
 
 .helptext, .helptext ul{
@@ -141,10 +139,10 @@ a.highlight{
 }
 
 .site-form input[type="submit"]{
-    background: #00dba0;
+    background: #c7bf50;
     border: 0;
     color: #fff;
     font-size: 20px;
     border-radius: 4px;
     margin: 10px 0;
-} */
+}

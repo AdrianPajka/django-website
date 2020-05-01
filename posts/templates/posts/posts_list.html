@@ -9,6 +9,7 @@
              <h2> <a href="{% url 'posts:details' slug=post.slug %}"> {{post.title}} </a> </h2>
              <p> {{ post.snippet}}</p>
              <p> {{post.date}}</p>
+             <p class="author">added by {{ post.author.username }}</p>
          </div>
       {%endfor%}
 
